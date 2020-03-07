@@ -5,7 +5,7 @@ userSurname = input("What is your surname?\n")
 print(f"Hello, {userName} {userSurname}!")
 userAge = input ("How old are you?\n")
 print(f"Your age is {userAge} years old!\n")
-#
+
 # Task_2
 
 timeInput = input("Enter time in seconds\n")
