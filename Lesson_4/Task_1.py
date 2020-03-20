@@ -9,7 +9,9 @@
 from sys import argv
 
 dummy, user_rate, user_working, user_bonus = argv
+
 # без dummy не работает, не знаю почему
+
 print('Rate: ', user_rate)
 print('Working hours: ', user_working)
 print('Bonus: ', user_bonus)
