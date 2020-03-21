@@ -4,8 +4,8 @@ print("Реши правильно 20 примеров")
 i = 0
 mistakes = 0
 while i < 20:
-    a = random.randrange (1, 10)
-    b = random.randrange (1, 10)
+    a = random.randrange (3, 9)
+    b = random.randrange (4, 11)
     answer = a + b
     user_answer = input (f"{a} + {b} = ")
     user_answer = int(user_answer)
