@@ -3,14 +3,19 @@
 кто из сотрудников имеет оклад менее 20 тыс., вывести фамилии этих сотрудников.
 Выполнить подсчет средней величины дохода сотрудников.
 """
-my_dict={}
-data = open('data_task5.txt', 'r')
+i = 0
+salary_sum = 0
 
-for line in data:
-    tmp = (line.split(' '))
-    surname = tmp[0]
-    salary = tmp[1]
+with open('data_task3.txt', 'r') as file:
+    workers = {}
 
-print(data)
+    for line in file:
+        surname, salary = line.split()
+        workers[surname] = salary
+        i += 1
+        salary_sum = salary_sum + int(salary)
 
+        if int(salary) < 20000:
+            print(f"Salary less than 20000 rub at {surname}. He have only {salary} rub")
 
+print(f'Average salary - {salary_sum / i}')

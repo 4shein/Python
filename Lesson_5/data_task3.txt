@@ -1,0 +1,5 @@
+Ivanov 20000
+Petrov 15000
+Sidorov 10000
+Ffedorov 16000
+Musin 38000
