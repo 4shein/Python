@@ -30,8 +30,3 @@ with open('data_task4.txt', 'r') as file:
 
         with open('data_task4_2.txt', 'a') as new_data:
             print(data, file=new_data, end='')
-
-
-
-
-
