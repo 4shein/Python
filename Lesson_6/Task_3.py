@@ -8,34 +8,28 @@ income (доход). Последний атрибут должен быть з�
 """
 
 class Worker:
-    name: str = None
-    surname: str = None
-    position: str = None
-    _income = {'wage': None,
-                    'bonus': None,
-                    }
 
-    def __init__(self, name, surname, salary, bonus):
+    def __init__(self, name, surname, wage, bonus):
         self.name = name,
         self.surname = surname,
-        self._income[wage] = wage
-        self._income[bonus] = bonus
+        self._income = {'wage': float(wage), 'bonus': float(bonus)}
 
-# не знаю, как обраатиться к словарю
+
+    def get_full_name(self):
+        return f'{self.name} {self.surname}'
+
+    def get_total_income(self):
+        return sum(self._income.values())
 
 class Position(Worker):
 
-    def get_full_name(self, name, surname):
-        self.name = name
-        self.surname = surname
-        return name + surname
 
-
-    def get_total_income(self, wage, bonus):
-        self._income = wage
-        self._income = bonus
-        return sum(self._income.values())
+    def __init__(self, position_name, name, surname, wage: float, bonus: float):
+        self.position_name = position_name
+        super().__init__(name, surname, wage, bonus)
 
 
 if __name__ == '__main__':
-    tmp = Worker('Менеджер', 'Анатолий', 'Дукалис', 12000, 1000)
+    tmp = Position('Менеджер', 'Анатолий', 'Дукалис', 12000, 2000)
+
+print(1)
