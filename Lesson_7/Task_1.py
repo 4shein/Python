@@ -9,5 +9,15 @@
 Подсказка: сложение элементов матриц выполнять поэлементно — первый элемент первой строки первой матрицы
 складываем с первым элементом первой строки второй матрицы и т.д.
 """
-user_continue = 0
-user_continue = input(print('Нажми Enter, чтобы продожить или любой символ для выхода из программы'))
+import time
+time_start = time.time()
+print(time_start)
+number = input("number")
+time_stop = time.time()
+print(time_stop)
+user_time = time_stop - time_start
+print(user_time)
+time_min = round(user_time // 60)
+time_sec = round(user_time % 60)
+print(time_min)
+print(time_sec)
