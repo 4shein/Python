@@ -166,7 +166,7 @@ while True:
             mistakes = 0
             time_start = time.time()
             while i < task_number:
-                a = random.randrange(4, max_number ** 2)
+                a = random.randrange(max_number * 2, max_number ** 2)
                 b = random.randrange(2, max_number)
                 answer = a / b
                 if a % b == 0:
