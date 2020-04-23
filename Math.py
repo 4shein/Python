@@ -15,9 +15,16 @@ while True:
         print(error_value)
         continue
 
-    operation = input('Выберите действие с числами сложение или вычитание ( + , - , * или / ) ')
+    print('\nВозможные действия с числами:')
+    operation = input(f'сложение (нажмите "+", затем Enter)\n'
+                      'вычитание (нажмите "-", затем Enter)\n'
+                      'умножение (нажмите "*", затем Enter)\n'
+                      'деление (нажмите "/", затем Enter)\n'
+                      'комбинированные действия (нажмите "z", затем Enter)\n'
+                      '\nВыберите действие с числами '
+                      )
 
-    if operation == "+" or operation == "-" or operation == "*" or operation == "/":
+    if operation == "+" or operation == "-" or operation == "*" or operation == "/" or 'z' or 'Z':
 
         if operation == '+':
             while True:
@@ -27,6 +34,11 @@ while True:
                 except:
                     print(error_value)
                     continue
+
+                if int(number_terms) <=1:
+                    print(error_value)
+                    continue
+
                 break
             number_terms = int(number_terms)
             i = 0
@@ -156,6 +168,10 @@ while True:
                 try:
                     int(number_factors)
                 except:
+                    print(error_value)
+                    continue
+
+                if int(number_factors) <=1:
                     print(error_value)
                     continue
                 break
@@ -296,6 +312,12 @@ while True:
                     f"Неплохо! Вы допустили {mistakes} ошибки за {time_min} мин. {time_sec} сек. Вам нужно потренироваться")
             else:
                 print(f"Вы совершили {mistakes} ошибок за {time_min} мин. {time_sec} сек. Выполните это задание еще три раза")
+
+        if operation == 'z':
+            print('combined action')
+
+        else:
+            print(error_value)
 
         user_continue = input('Нажми Enter, чтобы продожить или любой символ для выхода из программы ')
         if user_continue != "":
