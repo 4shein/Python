@@ -1,5 +1,5 @@
 import random, time
-task_number = 3
+task_number = 10
 error_value = 'Введены неверные данные!'
 print("Решите правильно 10 примеров")
 
