@@ -231,6 +231,9 @@ while True:
                     print('Сломал программу')
 
             time_stop = time.time()
+
+
+
             user_time = time_stop - time_start
             time_min = round(user_time // 60)
             time_sec = round(user_time % 60)
